@@ -5,6 +5,8 @@ nav {
   justify-content: space-between;
   width: 98%;
   gap: 20px;
+  position: absolute;
+  z-index: 9;
 }
 nav .logoNav {
   position: relative;
@@ -46,7 +48,7 @@ nav ul li {
   color: #222258;
   white-space: nowrap;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 nav ul li:hover {
   color: #ff005c;

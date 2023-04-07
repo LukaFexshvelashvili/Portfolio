@@ -5,3 +5,11 @@
     background: $BgColor_;
     border-radius: 5px;
 }
+.App {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .Content {
+        width: 100%;
+    }
+}

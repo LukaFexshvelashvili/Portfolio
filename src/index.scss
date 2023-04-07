@@ -25,7 +25,60 @@ body {
     font-family: main_b;
     letter-spacing: 1px;
 }
+
 .contentContainer {
-    width: 98%;
-    margin: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 768px) {
+    .contentContainer {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .contentContainer {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .contentContainer {
+        width: 1170px;
+    }
+}
+@media (min-width: 1300px) {
+    .contentContainer {
+        width: 98%;
+    }
+}
+.DefButton {
+    height: 40px;
+    width: 240px;
+    border-radius: 10px;
+    border: 0;
+    font-family: main_b;
+    font-size: 17px;
+    letter-spacing: 1px;
+    background: $MainColor;
+    transition: 0.2s;
+    &:hover {
+        background: rgb(235, 0, 86);
+    }
+}
+.DefButton2 {
+    @extend .DefButton;
+    color: $MainColor;
+    background: $MainColor_;
+    transition: 0.2s;
+    &:hover {
+        color: $MainColor;
+        background: rgba(255, 0, 93, 0.2);
+    }
+}
+button {
+    cursor: pointer;
+}
+.g-6 {
+    width: 50%;
 }

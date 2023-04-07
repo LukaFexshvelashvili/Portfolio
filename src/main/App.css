@@ -4,3 +4,12 @@
   background: #080829;
   border-radius: 5px;
 }
+
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.App .Content {
+  width: 100%;
+}

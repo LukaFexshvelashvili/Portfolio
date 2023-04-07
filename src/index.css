@@ -27,6 +27,61 @@ body {
 }
 
 .contentContainer {
-  width: 98%;
-  margin: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .contentContainer {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .contentContainer {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .contentContainer {
+    width: 1170px;
+  }
+}
+@media (min-width: 1300px) {
+  .contentContainer {
+    width: 98%;
+  }
+}
+.DefButton, .DefButton2 {
+  height: 40px;
+  width: 240px;
+  border-radius: 10px;
+  border: 0;
+  font-family: main_b;
+  font-size: 17px;
+  letter-spacing: 1px;
+  background: #ff005c;
+  transition: 0.2s;
+}
+.DefButton:hover, .DefButton2:hover {
+  background: rgb(235, 0, 86);
+}
+
+.DefButton2 {
+  color: #ff005c;
+  background: rgba(255, 0, 93, 0.1);
+  transition: 0.2s;
+}
+.DefButton2:hover {
+  color: #ff005c;
+  background: rgba(255, 0, 93, 0.2);
+}
+
+button {
+  cursor: pointer;
+}
+
+.g-6 {
+  width: 50%;
 }
