@@ -25,7 +25,13 @@ body {
     font-family: main_b;
     letter-spacing: 1px;
 }
-
+::-webkit-scrollbar {
+    width: 5px;
+    background: $BgColor__;
+}
+::-webkit-scrollbar-thumb {
+    background: $MainColor;
+}
 .contentContainer {
     padding-right: 15px;
     padding-left: 15px;

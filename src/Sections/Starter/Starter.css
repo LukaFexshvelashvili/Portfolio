@@ -20,13 +20,13 @@
   left: 0;
 }
 .Starter .bgDecor2 {
-  top: 10%;
+  top: 0%;
 }
 .Starter .bgDecor3 {
   right: 0;
 }
 .Starter .bgDecor4 {
-  bottom: 10%;
+  bottom: 20%;
 }
 .Starter .WelcomeContent {
   display: flex;

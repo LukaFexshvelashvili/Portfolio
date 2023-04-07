@@ -13,3 +13,23 @@
 .App .Content {
   width: 100%;
 }
+
+.starterSections {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.starterSections h1 {
+  letter-spacing: 3px;
+  white-space: nowrap;
+  color: white;
+  font-family: main_rc;
+  font-size: 30px;
+}
+.starterSections h1 span {
+  color: #ff005c;
+}
+
+.SecPadder {
+  padding: 40px 0;
+}

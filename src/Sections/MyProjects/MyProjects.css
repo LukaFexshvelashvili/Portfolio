@@ -1,0 +1,17 @@
+.MyProjects {
+  background: #040413;
+}
+
+.ProjectsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin: 70px 0;
+}
+
+.ProjectsB {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}

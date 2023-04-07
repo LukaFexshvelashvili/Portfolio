@@ -26,6 +26,15 @@ body {
   letter-spacing: 1px;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  background: #060621;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff005c;
+}
+
 .contentContainer {
   padding-right: 15px;
   padding-left: 15px;
