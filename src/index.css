@@ -1,0 +1,32 @@
+@font-face {
+  font-family: main_rc;
+  src: url("./fonts/TKT-Regular-Caps.ttf");
+}
+@font-face {
+  font-family: main_mc;
+  src: url("./fonts/TKT-Medium-Caps.ttf");
+}
+@font-face {
+  font-family: main_m;
+  src: url("./fonts/TKT-Medium.ttf");
+}
+@font-face {
+  font-family: main_b;
+  src: url("./fonts/TKT-Bold.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #030311;
+  font-family: main_b;
+  letter-spacing: 1px;
+}
+
+.contentContainer {
+  width: 98%;
+  margin: auto;
+}

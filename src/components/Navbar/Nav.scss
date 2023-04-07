@@ -1,0 +1,68 @@
+@import "../../main/Colors.scss";
+
+nav {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 98%;
+    gap: 20px;
+    .logoNav {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+        height: 50px;
+        cursor: pointer;
+        background: $BgColor_;
+        border-radius: 0 10px 10px 0;
+        gap: 20px;
+        color: $White_;
+        img {
+            height: 32px;
+        }
+        p {
+            white-space: nowrap;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            background: $BgColor_;
+            left: -100%;
+            z-index: 0;
+        }
+    }
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        li {
+            font-family: main_mc;
+            letter-spacing: 2px;
+            list-style: none;
+            color: $TextB;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover {
+                color: $MainColor;
+            }
+        }
+        .liContact {
+            font-size: 17px;
+            padding: 6px 25px;
+            border-radius: 10px;
+            color: $MainColor;
+            background: $BgColor__;
+            transition: 0.3s;
+            &:hover {
+                background: $BgColorH;
+            }
+        }
+    }
+}
