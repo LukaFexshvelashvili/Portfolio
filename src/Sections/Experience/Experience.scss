@@ -1,3 +1,175 @@
 @import "../../main/Colors.scss";
-.Experience {
+
+.GlowStick {
+    width: 96%;
+    height: 5px;
+    border-radius: 5px;
+    background: $MainColor;
+    margin: 0 auto;
+}
+.GDown {
+    box-shadow: 0px 10px 25px #ff005c;
+}
+.GUp {
+    box-shadow: 0px -10px 25px #ff005c;
+}
+.ExperienceContent {
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+    .LogoSide {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        padding: 0 50px;
+    }
+    .TextSide {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: $Desc;
+        letter-spacing: 2px;
+        line-height: 28px;
+        font-size: 17px;
+
+        h3 {
+            width: 80%;
+        }
+        .langS {
+            position: relative;
+            cursor: pointer;
+            transition: 0.2s;
+            display: inline-block;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                height: 2px;
+                width: 0%;
+                transition: 0.2s;
+            }
+        }
+        .redDot {
+            color: $MainColor;
+            animation: 1s lighter infinite ease-in-out;
+        }
+        .redDot2 {
+            animation-delay: 0.5s;
+        }
+        .HTMLDot {
+            color: #ff5722;
+            &::before {
+                background: #ff5722;
+            }
+        }
+        .CSSDot {
+            color: #2965f1;
+            &::before {
+                background: #2965f1;
+            }
+        }
+        .BOOTSTRAPDot {
+            color: #db00ff;
+            &::before {
+                background: #db00ff;
+            }
+        }
+        .SCSSDot {
+            color: #cd6799;
+            &::before {
+                background: #cd6799;
+            }
+        }
+        .JAVASCRIPTDot {
+            color: #f0db4f;
+            &::before {
+                background: #f0db4f;
+            }
+        }
+        .JQUERYDot {
+            color: #0868ac;
+            &::before {
+                background: #0868ac;
+            }
+        }
+        .TYPESCRIPTDot {
+            color: #017acb;
+            &::before {
+                background: #017acb;
+            }
+        }
+        .REACTDot {
+            color: #5db2f6;
+            &::before {
+                background: #5db2f6;
+            }
+        }
+        .VITEDot {
+            color: #bd34fe;
+            &::before {
+                background: #bd34fe;
+            }
+        }
+        .PHPDot {
+            color: #777bb3;
+            &::before {
+                background: #777bb3;
+            }
+        }
+        .MYSQLDot {
+            color: #ce8b2c;
+            &::before {
+                background: #ce8b2c;
+            }
+        }
+        .FIGMADot {
+            color: #0acf83;
+            &::before {
+                background: #0acf83;
+            }
+        }
+        .noner {
+            color: $Desc;
+        }
+        .ActivedN {
+            filter: brightness(1.5);
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+}
+.LogosRow {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    .LogoCard {
+        height: 100px;
+        aspect-ratio: 1;
+        border-radius: 5px;
+        background: $BgColor__;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.2s;
+        img {
+            width: 60%;
+        }
+    }
+    .ActivedC {
+        background: #0b0b3c;
+        transform: translateY(-10px);
+    }
+}
+@keyframes lighter {
+    0% {
+        color: $MainColor;
+    }
+    50% {
+        color: $MainColorL;
+    }
 }

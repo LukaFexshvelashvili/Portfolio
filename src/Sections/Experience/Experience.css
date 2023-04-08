@@ -1,0 +1,177 @@
+.GlowStick {
+  width: 96%;
+  height: 5px;
+  border-radius: 5px;
+  background: #ff005c;
+  margin: 0 auto;
+}
+
+.GDown {
+  box-shadow: 0px 10px 25px #ff005c;
+}
+
+.GUp {
+  box-shadow: 0px -10px 25px #ff005c;
+}
+
+.ExperienceContent {
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+}
+.ExperienceContent .LogoSide {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 0 50px;
+}
+.ExperienceContent .TextSide {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 2px;
+  line-height: 28px;
+  font-size: 17px;
+}
+.ExperienceContent .TextSide h3 {
+  width: 80%;
+}
+.ExperienceContent .TextSide .langS {
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
+  display: inline-block;
+}
+.ExperienceContent .TextSide .langS::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  transition: 0.2s;
+}
+.ExperienceContent .TextSide .redDot {
+  color: #ff005c;
+  animation: 1s lighter infinite ease-in-out;
+}
+.ExperienceContent .TextSide .redDot2 {
+  animation-delay: 0.5s;
+}
+.ExperienceContent .TextSide .HTMLDot {
+  color: #ff5722;
+}
+.ExperienceContent .TextSide .HTMLDot::before {
+  background: #ff5722;
+}
+.ExperienceContent .TextSide .CSSDot {
+  color: #2965f1;
+}
+.ExperienceContent .TextSide .CSSDot::before {
+  background: #2965f1;
+}
+.ExperienceContent .TextSide .BOOTSTRAPDot {
+  color: #db00ff;
+}
+.ExperienceContent .TextSide .BOOTSTRAPDot::before {
+  background: #db00ff;
+}
+.ExperienceContent .TextSide .SCSSDot {
+  color: #cd6799;
+}
+.ExperienceContent .TextSide .SCSSDot::before {
+  background: #cd6799;
+}
+.ExperienceContent .TextSide .JAVASCRIPTDot {
+  color: #f0db4f;
+}
+.ExperienceContent .TextSide .JAVASCRIPTDot::before {
+  background: #f0db4f;
+}
+.ExperienceContent .TextSide .JQUERYDot {
+  color: #0868ac;
+}
+.ExperienceContent .TextSide .JQUERYDot::before {
+  background: #0868ac;
+}
+.ExperienceContent .TextSide .TYPESCRIPTDot {
+  color: #017acb;
+}
+.ExperienceContent .TextSide .TYPESCRIPTDot::before {
+  background: #017acb;
+}
+.ExperienceContent .TextSide .REACTDot {
+  color: #5db2f6;
+}
+.ExperienceContent .TextSide .REACTDot::before {
+  background: #5db2f6;
+}
+.ExperienceContent .TextSide .VITEDot {
+  color: #bd34fe;
+}
+.ExperienceContent .TextSide .VITEDot::before {
+  background: #bd34fe;
+}
+.ExperienceContent .TextSide .PHPDot {
+  color: #777bb3;
+}
+.ExperienceContent .TextSide .PHPDot::before {
+  background: #777bb3;
+}
+.ExperienceContent .TextSide .MYSQLDot {
+  color: #ce8b2c;
+}
+.ExperienceContent .TextSide .MYSQLDot::before {
+  background: #ce8b2c;
+}
+.ExperienceContent .TextSide .FIGMADot {
+  color: #0acf83;
+}
+.ExperienceContent .TextSide .FIGMADot::before {
+  background: #0acf83;
+}
+.ExperienceContent .TextSide .noner {
+  color: rgba(255, 255, 255, 0.6);
+}
+.ExperienceContent .TextSide .ActivedN {
+  filter: brightness(1.5);
+}
+.ExperienceContent .TextSide .ActivedN::before {
+  width: 100%;
+}
+
+.LogosRow {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.LogosRow .LogoCard {
+  height: 100px;
+  aspect-ratio: 1;
+  border-radius: 5px;
+  background: #060621;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.LogosRow .LogoCard img {
+  width: 60%;
+}
+.LogosRow .ActivedC {
+  background: #0b0b3c;
+  transform: translateY(-10px);
+}
+
+@keyframes lighter {
+  0% {
+    color: #ff005c;
+  }
+  50% {
+    color: #ff00d9;
+  }
+}

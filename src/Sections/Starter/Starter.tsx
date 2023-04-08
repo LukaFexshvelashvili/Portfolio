@@ -91,7 +91,7 @@ export default function Starter() {
       <div className="contentContainer StarterWrap">
         <div className="WelcomeContent g-6">
           <h1>
-            გამარჯობა, მე ვარ <span ref={StarterSpan}>ვებ დეველოპერი</span>
+            გამარჯობა, მე ვარ<span ref={StarterSpan}>ვებ დეველოპერი</span>
           </h1>
           <p>
             3 წლიანი გამოცდილებით, გუნდური პროექტების გამოცდილებით და კლიენტთან

@@ -8,18 +8,46 @@ import project7 from "../images/Projects/project7.png";
 import project8 from "../images/Projects/project8.png";
 import project9 from "../images/Projects/project9.png";
 import project10 from "../images/Projects/project10.png";
+import project11 from "../images/Projects/project11.png";
+import project12 from "../images/Projects/project12.png";
 
 const ProjectsArray = [
-  { image: project1 },
-  { image: project2 },
-  { image: project3 },
-  { image: project4 },
-  { image: project5 },
-  { image: project6 },
-  { image: project7 },
-  { image: project8 },
-  { image: project9 },
-  { image: project10 },
+  { image: project1, LiveLink: "", GitLink: "" },
+  { image: project2, LiveLink: "", GitLink: "" },
+  { image: project3, LiveLink: "", GitLink: "" },
+  { image: project4, LiveLink: "", GitLink: "" },
+  {
+    image: project5,
+    LiveLink: "https://lukafexshvelashvili.github.io/CampWebsite-React-TS/",
+    GitLink: "https://github.com/LukaFexshvelashvili/CampWebsite-React-TS",
+  },
+  {
+    image: project6,
+    LiveLink: "https://lukafexshvelashvili.github.io/BookStoreWebsite/",
+    GitLink: "https://github.com/LukaFexshvelashvili/BookStoreWebsite",
+  },
+  {
+    image: project7,
+    LiveLink: "https://moderndesigners.github.io/Food-Restaurant/",
+    GitLink: "https://github.com/ModernDesigners/Food-Restaurant",
+  },
+  {
+    image: project8,
+    LiveLink: "https://moderndesigners.github.io/ModernWatch/",
+    GitLink: "https://github.com/ModernDesigners/ModernWatch",
+  },
+  {
+    image: project11,
+    LiveLink: "https://lukafexshvelashvili.github.io/ColabWebsite/",
+    GitLink: "https://github.com/LukaFexshvelashvili/ColabWebsite",
+  },
+  { image: project9, LiveLink: "https://reboundrp.net", GitLink: "" },
+  { image: project10, LiveLink: "", GitLink: "" },
+  {
+    image: project12,
+    LiveLink: "https://lukafexshvelashvili.github.io/CoelusoWebsite/",
+    GitLink: "https://github.com/LukaFexshvelashvili/CoelusoWebsite",
+  },
 ];
 
 export default ProjectsArray;

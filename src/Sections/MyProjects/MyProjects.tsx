@@ -9,9 +9,19 @@ export default function MyProjects() {
       <div className="contentContainer">
         <SectionStart start="ჩემი" end="პროექტები" />
         <div className="ProjectsRow">
-          {ProjectsArray.map((e: { image: string }, i: number) => (
-            <ProjectCard key={i} image={e.image} />
-          ))}
+          {ProjectsArray.map(
+            (
+              e: { image: string; LiveLink?: string; GitLink?: string },
+              i: number
+            ) => (
+              <ProjectCard
+                key={i}
+                image={e.image}
+                LiveLink={e.LiveLink}
+                GitLink={e.GitLink}
+              />
+            )
+          )}
         </div>
         <div className="ProjectsB">
           <button className="DefButton">მეტის ნახვა</button>
