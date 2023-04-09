@@ -8,15 +8,15 @@
     margin: 0 auto;
 }
 .GDown {
-    box-shadow: 0px 10px 25px #ff005c;
+    animation: 1.4s lightsGlowDown infinite ease-in-out;
 }
 .GUp {
-    box-shadow: 0px -10px 25px #ff005c;
+    animation: 1.4s lightsGlowUp infinite ease-in-out;
 }
 .ExperienceContent {
     display: flex;
     align-items: center;
-    padding: 50px 0;
+    padding: 50px 10px;
     .LogoSide {
         display: flex;
         flex-direction: column;
@@ -33,7 +33,7 @@
         font-size: 17px;
 
         h3 {
-            width: 80%;
+            width: 85%;
         }
         .langS {
             position: relative;
@@ -49,88 +49,7 @@
                 transition: 0.2s;
             }
         }
-        .redDot {
-            color: $MainColor;
-            animation: 1s lighter infinite ease-in-out;
-        }
-        .redDot2 {
-            animation-delay: 0.5s;
-        }
-        .HTMLDot {
-            color: #ff5722;
-            &::before {
-                background: #ff5722;
-            }
-        }
-        .CSSDot {
-            color: #2965f1;
-            &::before {
-                background: #2965f1;
-            }
-        }
-        .BOOTSTRAPDot {
-            color: #db00ff;
-            &::before {
-                background: #db00ff;
-            }
-        }
-        .SCSSDot {
-            color: #cd6799;
-            &::before {
-                background: #cd6799;
-            }
-        }
-        .JAVASCRIPTDot {
-            color: #f0db4f;
-            &::before {
-                background: #f0db4f;
-            }
-        }
-        .JQUERYDot {
-            color: #0868ac;
-            &::before {
-                background: #0868ac;
-            }
-        }
-        .TYPESCRIPTDot {
-            color: #017acb;
-            &::before {
-                background: #017acb;
-            }
-        }
-        .REACTDot {
-            color: #5db2f6;
-            &::before {
-                background: #5db2f6;
-            }
-        }
-        .VITEDot {
-            color: #bd34fe;
-            &::before {
-                background: #bd34fe;
-            }
-        }
-        .PHPDot {
-            color: #777bb3;
-            &::before {
-                background: #777bb3;
-            }
-        }
-        .MYSQLDot {
-            color: #ce8b2c;
-            &::before {
-                background: #ce8b2c;
-            }
-        }
-        .FIGMADot {
-            color: #0acf83;
-            &::before {
-                background: #0acf83;
-            }
-        }
-        .noner {
-            color: $Desc;
-        }
+
         .ActivedN {
             filter: brightness(1.5);
             &::before {
@@ -138,6 +57,91 @@
             }
         }
     }
+}
+.redDot {
+    color: $MainColor;
+    animation: 1s lighter infinite ease-in-out;
+}
+.redDot2 {
+    animation-delay: 0.5s;
+}
+.HTMLDot {
+    color: #ff5722;
+    &::before {
+        background: #ff5722;
+    }
+}
+.CSSDot {
+    color: #2965f1;
+    &::before {
+        background: #2965f1;
+    }
+}
+.BOOTSTRAPDot {
+    color: #db00ff;
+    &::before {
+        background: #db00ff;
+    }
+}
+.SCSSDot {
+    color: #cd6799;
+    &::before {
+        background: #cd6799;
+    }
+}
+.JAVASCRIPTDot {
+    color: #f0db4f;
+    &::before {
+        background: #f0db4f;
+    }
+}
+.JQUERYDot {
+    color: #0868ac;
+    &::before {
+        background: #0868ac;
+    }
+}
+.TYPESCRIPTDot {
+    color: #017acb;
+    &::before {
+        background: #017acb;
+    }
+}
+.REACTDot {
+    color: #5db2f6;
+    &::before {
+        background: #5db2f6;
+    }
+}
+.VITEDot {
+    color: #bd34fe;
+    &::before {
+        background: #bd34fe;
+    }
+}
+.PHPDot {
+    color: #777bb3;
+    &::before {
+        background: #777bb3;
+    }
+}
+.MYSQLDot {
+    color: #ce8b2c;
+    &::before {
+        background: #ce8b2c;
+    }
+}
+.FIGMADot {
+    color: #0acf83;
+    &::before {
+        background: #0acf83;
+    }
+}
+.noner {
+    color: $Desc;
+}
+.nonerr {
+    color: $White;
 }
 .LogosRow {
     display: flex;
@@ -171,5 +175,27 @@
     }
     50% {
         color: $MainColorL;
+    }
+}
+@keyframes lightsGlowDown {
+    0% {
+        box-shadow: 0px 10px 35px #ff005c;
+    }
+    50% {
+        box-shadow: 0px 10px 35px #ff005db7;
+    }
+    100% {
+        box-shadow: 0px 10px 35px #ff005c;
+    }
+}
+@keyframes lightsGlowUp {
+    0% {
+        box-shadow: 0px -10px 35px #ff005c;
+    }
+    50% {
+        box-shadow: 0px -10px 35px #ff005db7;
+    }
+    100% {
+        box-shadow: 0px -10px 35px #ff005c;
     }
 }

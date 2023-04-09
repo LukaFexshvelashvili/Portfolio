@@ -32,6 +32,10 @@
   pointer-events: unset;
   opacity: 1;
 }
+.ProjectCard:hover .DetailsG {
+  pointer-events: unset;
+  opacity: 1;
+}
 .ProjectCard .LoaderImg {
   position: absolute;
   height: 100%;
@@ -59,6 +63,15 @@
   object-fit: cover;
   object-position: 0% 0%;
 }
+.ProjectCard .DetailsG {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 5;
+  border-radius: 5px;
+  border: 2px solid #ff005c;
+  bottom: 10px;
+}
 
 .HoverButtons {
   opacity: 0;
@@ -67,10 +80,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   gap: 10px;
   transition: 0.2s;
+  top: 10px;
   pointer-events: none;
+}
+.HoverButtons a button {
+  height: 30px;
+  width: 120px;
+  font-size: 14px;
+  border-radius: 5px;
 }
 
 @keyframes loadingImg {

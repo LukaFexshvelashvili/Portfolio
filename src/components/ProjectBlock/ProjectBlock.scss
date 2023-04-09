@@ -1,0 +1,88 @@
+@import "../../main/Colors.scss";
+.ProjectBlock {
+    height: 600px;
+    width: 80%;
+    background: $BgColor_;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    box-shadow: 10px 10px $BgColor___, 0 0 30px black;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s;
+
+    .closeBlock {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        height: 30px;
+        aspect-ratio: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            border-radius: 5px;
+            rotate: -45deg;
+            background: $MainColor;
+            &:nth-child(2) {
+                rotate: 45deg;
+            }
+        }
+    }
+    .imageSide {
+        height: 100%;
+        overflow-y: auto;
+        position: relative;
+        img {
+            top: 0;
+            position: absolute;
+            width: 100%;
+            object-fit: cover;
+            object-position: 0 0;
+        }
+    }
+    .infoSide {
+        height: 100%;
+        color: $White;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        .usedLanguages {
+            margin-top: 20px;
+            letter-spacing: 2px;
+            line-height: 25px;
+            width: 100%;
+        }
+        .ButtonsProject {
+            display: flex;
+            gap: 10px;
+            position: absolute;
+            bottom: 20px;
+            button {
+                height: 30px;
+                width: 120px;
+                font-size: 14px;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+.ProjectBlockClosed {
+    transform: translate(-50%, -200%);
+    opacity: 0;
+}

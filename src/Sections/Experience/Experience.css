@@ -7,17 +7,17 @@
 }
 
 .GDown {
-  box-shadow: 0px 10px 25px #ff005c;
+  animation: 1.4s lightsGlowDown infinite ease-in-out;
 }
 
 .GUp {
-  box-shadow: 0px -10px 25px #ff005c;
+  animation: 1.4s lightsGlowUp infinite ease-in-out;
 }
 
 .ExperienceContent {
   display: flex;
   align-items: center;
-  padding: 50px 0;
+  padding: 50px 10px;
 }
 .ExperienceContent .LogoSide {
   display: flex;
@@ -35,7 +35,7 @@
   font-size: 17px;
 }
 .ExperienceContent .TextSide h3 {
-  width: 80%;
+  width: 85%;
 }
 .ExperienceContent .TextSide .langS {
   position: relative;
@@ -51,93 +51,112 @@
   width: 0%;
   transition: 0.2s;
 }
-.ExperienceContent .TextSide .redDot {
-  color: #ff005c;
-  animation: 1s lighter infinite ease-in-out;
-}
-.ExperienceContent .TextSide .redDot2 {
-  animation-delay: 0.5s;
-}
-.ExperienceContent .TextSide .HTMLDot {
-  color: #ff5722;
-}
-.ExperienceContent .TextSide .HTMLDot::before {
-  background: #ff5722;
-}
-.ExperienceContent .TextSide .CSSDot {
-  color: #2965f1;
-}
-.ExperienceContent .TextSide .CSSDot::before {
-  background: #2965f1;
-}
-.ExperienceContent .TextSide .BOOTSTRAPDot {
-  color: #db00ff;
-}
-.ExperienceContent .TextSide .BOOTSTRAPDot::before {
-  background: #db00ff;
-}
-.ExperienceContent .TextSide .SCSSDot {
-  color: #cd6799;
-}
-.ExperienceContent .TextSide .SCSSDot::before {
-  background: #cd6799;
-}
-.ExperienceContent .TextSide .JAVASCRIPTDot {
-  color: #f0db4f;
-}
-.ExperienceContent .TextSide .JAVASCRIPTDot::before {
-  background: #f0db4f;
-}
-.ExperienceContent .TextSide .JQUERYDot {
-  color: #0868ac;
-}
-.ExperienceContent .TextSide .JQUERYDot::before {
-  background: #0868ac;
-}
-.ExperienceContent .TextSide .TYPESCRIPTDot {
-  color: #017acb;
-}
-.ExperienceContent .TextSide .TYPESCRIPTDot::before {
-  background: #017acb;
-}
-.ExperienceContent .TextSide .REACTDot {
-  color: #5db2f6;
-}
-.ExperienceContent .TextSide .REACTDot::before {
-  background: #5db2f6;
-}
-.ExperienceContent .TextSide .VITEDot {
-  color: #bd34fe;
-}
-.ExperienceContent .TextSide .VITEDot::before {
-  background: #bd34fe;
-}
-.ExperienceContent .TextSide .PHPDot {
-  color: #777bb3;
-}
-.ExperienceContent .TextSide .PHPDot::before {
-  background: #777bb3;
-}
-.ExperienceContent .TextSide .MYSQLDot {
-  color: #ce8b2c;
-}
-.ExperienceContent .TextSide .MYSQLDot::before {
-  background: #ce8b2c;
-}
-.ExperienceContent .TextSide .FIGMADot {
-  color: #0acf83;
-}
-.ExperienceContent .TextSide .FIGMADot::before {
-  background: #0acf83;
-}
-.ExperienceContent .TextSide .noner {
-  color: rgba(255, 255, 255, 0.6);
-}
 .ExperienceContent .TextSide .ActivedN {
   filter: brightness(1.5);
 }
 .ExperienceContent .TextSide .ActivedN::before {
   width: 100%;
+}
+
+.redDot {
+  color: #ff005c;
+  animation: 1s lighter infinite ease-in-out;
+}
+
+.redDot2 {
+  animation-delay: 0.5s;
+}
+
+.HTMLDot {
+  color: #ff5722;
+}
+.HTMLDot::before {
+  background: #ff5722;
+}
+
+.CSSDot {
+  color: #2965f1;
+}
+.CSSDot::before {
+  background: #2965f1;
+}
+
+.BOOTSTRAPDot {
+  color: #db00ff;
+}
+.BOOTSTRAPDot::before {
+  background: #db00ff;
+}
+
+.SCSSDot {
+  color: #cd6799;
+}
+.SCSSDot::before {
+  background: #cd6799;
+}
+
+.JAVASCRIPTDot {
+  color: #f0db4f;
+}
+.JAVASCRIPTDot::before {
+  background: #f0db4f;
+}
+
+.JQUERYDot {
+  color: #0868ac;
+}
+.JQUERYDot::before {
+  background: #0868ac;
+}
+
+.TYPESCRIPTDot {
+  color: #017acb;
+}
+.TYPESCRIPTDot::before {
+  background: #017acb;
+}
+
+.REACTDot {
+  color: #5db2f6;
+}
+.REACTDot::before {
+  background: #5db2f6;
+}
+
+.VITEDot {
+  color: #bd34fe;
+}
+.VITEDot::before {
+  background: #bd34fe;
+}
+
+.PHPDot {
+  color: #777bb3;
+}
+.PHPDot::before {
+  background: #777bb3;
+}
+
+.MYSQLDot {
+  color: #ce8b2c;
+}
+.MYSQLDot::before {
+  background: #ce8b2c;
+}
+
+.FIGMADot {
+  color: #0acf83;
+}
+.FIGMADot::before {
+  background: #0acf83;
+}
+
+.noner {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.nonerr {
+  color: white;
 }
 
 .LogosRow {
@@ -152,7 +171,7 @@
   height: 100px;
   aspect-ratio: 1;
   border-radius: 5px;
-  background: #060621;
+  background: #0d0d40;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,5 +192,27 @@
   }
   50% {
     color: #ff00d9;
+  }
+}
+@keyframes lightsGlowDown {
+  0% {
+    box-shadow: 0px 10px 35px #ff005c;
+  }
+  50% {
+    box-shadow: 0px 10px 35px rgba(255, 0, 93, 0.7176470588);
+  }
+  100% {
+    box-shadow: 0px 10px 35px #ff005c;
+  }
+}
+@keyframes lightsGlowUp {
+  0% {
+    box-shadow: 0px -10px 35px #ff005c;
+  }
+  50% {
+    box-shadow: 0px -10px 35px rgba(255, 0, 93, 0.7176470588);
+  }
+  100% {
+    box-shadow: 0px -10px 35px #ff005c;
   }
 }

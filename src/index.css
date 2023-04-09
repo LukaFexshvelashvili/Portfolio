@@ -28,7 +28,7 @@ body {
 
 ::-webkit-scrollbar {
   width: 5px;
-  background: #060621;
+  background: #0d0d40;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -91,6 +91,14 @@ button {
   cursor: pointer;
 }
 
+.g-4 {
+  width: 35%;
+}
+
 .g-6 {
   width: 50%;
+}
+
+.g-8 {
+  width: 65%;
 }

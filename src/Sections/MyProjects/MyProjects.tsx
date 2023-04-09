@@ -3,7 +3,9 @@ import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import SectionStart from "../../components/SectionStart/SectionStart";
 import "./MyProjects.css";
 
-export default function MyProjects() {
+export default function MyProjects(props: {
+  setProjectActive: React.Dispatch<React.SetStateAction<number>>;
+}) {
   return (
     <div className="MyProjects SecPadder">
       <div className="contentContainer">
@@ -11,14 +13,21 @@ export default function MyProjects() {
         <div className="ProjectsRow">
           {ProjectsArray.map(
             (
-              e: { image: string; LiveLink?: string; GitLink?: string },
+              e: {
+                image: string;
+                LiveLink?: string;
+                GitLink?: string;
+                ProjectId: number;
+              },
               i: number
             ) => (
               <ProjectCard
                 key={i}
+                ProjectId={e.ProjectId}
                 image={e.image}
                 LiveLink={e.LiveLink}
                 GitLink={e.GitLink}
+                Click={props.setProjectActive}
               />
             )
           )}
