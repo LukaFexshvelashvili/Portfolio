@@ -20,6 +20,10 @@
   box-sizing: border-box;
 }
 
+*::selection {
+  background: rgba(255, 0, 93, 0.6);
+}
+
 body {
   background: #030311;
   font-family: main_b;

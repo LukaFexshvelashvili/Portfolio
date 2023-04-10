@@ -1,5 +1,5 @@
 import "./ProjectBlock.css";
-import Project1 from "../../images/Projects/project1.png";
+import LoaderI from "../../images/Projects/Loader.webp";
 import ProjectsArray from "../../Arrays/ProjectsArray";
 import { useEffect, useRef } from "react";
 interface ProjectBlock {
@@ -18,7 +18,7 @@ export default function ProjectBlock({
     if (
       ProjectB.current &&
       !ProjectB.current.contains(event.target) &&
-      event.target.className != "ProjectCard"
+      event.target.className != "DefButton2 DetailsG"
     ) {
       setProjectActive(0);
     }
@@ -36,7 +36,10 @@ export default function ProjectBlock({
         <span></span>
       </div>
       <div className="imageSide g-8">
-        <img src={getProject?.image} alt="ProjectImage" />
+        <img
+          src={getProject?.image ? getProject?.image : LoaderI}
+          alt="ProjectImage"
+        />
       </div>
       <div className="infoSide g-4">
         <h2>{getProject?.PName}</h2>

@@ -17,7 +17,7 @@
 .starterSections {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
 }
 .starterSections h1 {
   letter-spacing: 3px;

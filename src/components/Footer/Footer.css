@@ -1,0 +1,72 @@
+.Footer {
+  min-height: 350px;
+  background: #060621;
+  padding: 30px 0;
+  position: relative;
+}
+.Footer .footerContainer {
+  display: flex;
+  justify-content: center;
+}
+.Footer .FooterRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  width: 100%;
+}
+.Footer .FooterRow .FooterColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 30%;
+  max-width: 30%;
+  padding-left: 60px;
+}
+.Footer .FooterRow .FooterColumn .FooterStarter {
+  margin-bottom: 5px;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 2px;
+  font-size: 22px;
+}
+.Footer .FooterRow .FooterColumn .FooterD {
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.Footer .FooterRow .FooterColumn .FooterD:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+.Footer a {
+  color: unset;
+  text-decoration: none;
+}
+.Footer .LineGlowUp {
+  height: 2px;
+  width: 100%;
+  background: #ff005c;
+  box-shadow: 0 -10px 30px #ff005c;
+}
+
+.rightsSwap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 2px;
+  margin: 15px 0;
+}
+
+.bottomSec {
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+}
+
+.webS {
+  transition: 0.1s;
+}
+.webS:hover {
+  color: rgba(255, 255, 255, 0.6);
+}

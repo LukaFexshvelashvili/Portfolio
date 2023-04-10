@@ -1,7 +1,8 @@
 @import "../../main/Colors.scss";
 .ProjectBlock {
-    height: 600px;
-    width: 80%;
+    height: auto;
+    max-height: 600px;
+    width: 85%;
     background: $BgColor_;
     border-radius: 10px;
     position: fixed;
@@ -11,7 +12,6 @@
     z-index: 999;
     box-shadow: 10px 10px $BgColor___, 0 0 30px black;
     display: flex;
-    align-items: center;
     overflow: hidden;
     transition: 0.5s;
 
@@ -22,6 +22,7 @@
         height: 30px;
         aspect-ratio: 1;
         display: flex;
+        z-index: 9;
         align-items: center;
         justify-content: center;
         cursor: pointer;
@@ -39,12 +40,10 @@
         }
     }
     .imageSide {
-        height: 100%;
+        height: auto;
         overflow-y: auto;
         position: relative;
         img {
-            top: 0;
-            position: absolute;
             width: 100%;
             object-fit: cover;
             object-position: 0 0;
@@ -83,6 +82,35 @@
     }
 }
 .ProjectBlockClosed {
-    transform: translate(-50%, -200%);
+    top: -100%;
     opacity: 0;
+}
+@media (max-width: 1000px) {
+    .ProjectBlock {
+        flex-direction: column-reverse;
+        gap: 30px;
+        text-align: center;
+        .imageSide {
+            width: 100%;
+        }
+        .infoSide {
+            width: 100%;
+            position: relative;
+
+            .ButtonsProject {
+                bottom: -20px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+            .usedLanguages {
+                font-size: 15px;
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .ProjectBlock {
+        width: 95%;
+    }
 }
