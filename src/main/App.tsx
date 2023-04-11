@@ -22,22 +22,25 @@ function App() {
       }, 300);
     };
 
-    window.addEventListener("load", handleLoad);
+    window.onload = handleLoad;
 
     return () => {
-      window.removeEventListener("load", handleLoad);
+      window.onload = null;
       clearTimeout(TimeOT);
     };
   }, []);
+  const isMob = window.innerWidth > 800;
   const [projectActive, setProjectActive] = useState(0);
   const [alertActive, setAlertActive] = useState(0);
 
   return (
     <div className="App">
-      {Loader ? (
-        <div ref={LoaderDiv} className="Loader">
-          <div className="LoaderC"></div>
-        </div>
+      {isMob ? (
+        Loader ? (
+          <div ref={LoaderDiv} className="Loader">
+            <div className="LoaderC"></div>
+          </div>
+        ) : null
       ) : null}
       <ProjectBlock
         projectActive={projectActive}
