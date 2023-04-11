@@ -1,15 +1,15 @@
-import project1 from "../images/Projects/project1.png";
-import project2 from "../images/Projects/project2.png";
-import project3 from "../images/Projects/project3.png";
-import project4 from "../images/Projects/project4.png";
-import project5 from "../images/Projects/project5.png";
-import project6 from "../images/Projects/project6.png";
-import project7 from "../images/Projects/project7.png";
-import project8 from "../images/Projects/project8.png";
-import project9 from "../images/Projects/project9.png";
-import project10 from "../images/Projects/project10.png";
-import project11 from "../images/Projects/project11.png";
-import project12 from "../images/Projects/project12.png";
+import project1 from "../images/Projects/project1.webp";
+import project2 from "../images/Projects/project2.webp";
+import project3 from "../images/Projects/project3.webp";
+import project4 from "../images/Projects/project4.webp";
+import project5 from "../images/Projects/project5.webp";
+import project6 from "../images/Projects/project6.webp";
+import project7 from "../images/Projects/project7.webp";
+import project8 from "../images/Projects/project8.webp";
+import project9 from "../images/Projects/project9.webp";
+import project10 from "../images/Projects/project10.webp";
+import project11 from "../images/Projects/project11.webp";
+import project12 from "../images/Projects/project12.webp";
 
 const ProjectsArray = [
   {

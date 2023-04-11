@@ -1,15 +1,15 @@
-import HTML from "../images/Languages/HTML.png";
-import CSS from "../images/Languages/CSS.png";
-import BOOTSTRAP from "../images/Languages/BOOTSTRAP.png";
-import SCSS from "../images/Languages/SCSS.png";
-import JAVASCRIPT from "../images/Languages/JAVASCRIPT.png";
-import JQUERY from "../images/Languages/JQUERY.png";
-import TYPESCRIPT from "../images/Languages/TYPESCRIPT.png";
-import REACT from "../images/Languages/REACT.png";
-import VITE from "../images/Languages/VITE.png";
-import PHP from "../images/Languages/PHP.png";
-import MYSQL from "../images/Languages/MYSQL.png";
-import FIGMA from "../images/Languages/FIGMA.png";
+import HTML from "../images/Languages/HTML.webp";
+import CSS from "../images/Languages/CSS.webp";
+import BOOTSTRAP from "../images/Languages/BOOTSTRAP.webp";
+import SCSS from "../images/Languages/SCSS.webp";
+import JAVASCRIPT from "../images/Languages/JAVASCRIPT.webp";
+import JQUERY from "../images/Languages/JQUERY.webp";
+import TYPESCRIPT from "../images/Languages/TYPESCRIPT.webp";
+import REACT from "../images/Languages/REACT.webp";
+import VITE from "../images/Languages/VITE.webp";
+import PHP from "../images/Languages/PHP.webp";
+import MYSQL from "../images/Languages/MYSQL.webp";
+import FIGMA from "../images/Languages/FIGMA.webp";
 
 export const LanguagesArray = [
   { getId: 1, image: HTML, name: "HTML" },

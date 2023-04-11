@@ -3,17 +3,42 @@ import MyProjects from "../Sections/MyProjects/MyProjects";
 import Nav from "../components/Navbar/Nav";
 import "./App.css";
 import Experience from "../Sections/Experience/Experience";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ProjectBlock from "../components/ProjectBlock/ProjectBlock";
 import Contact from "../Sections/Contact/Contact";
 import Footer from "../components/Footer/Footer";
 
 function App() {
+  const [Loader, setLoader] = useState(true);
+  const LoaderDiv = useRef<any>();
+  useEffect(() => {
+    let TimeOT: any;
+    const handleLoad = () => {
+      if (LoaderDiv.current) {
+        LoaderDiv.current.style.opacity = "0";
+      }
+      TimeOT = setTimeout(() => {
+        setLoader(false);
+      }, 300);
+    };
+
+    window.addEventListener("load", handleLoad);
+
+    return () => {
+      window.removeEventListener("load", handleLoad);
+      clearTimeout(TimeOT);
+    };
+  }, []);
   const [projectActive, setProjectActive] = useState(0);
   const [alertActive, setAlertActive] = useState(0);
 
   return (
     <div className="App">
+      {Loader ? (
+        <div ref={LoaderDiv} className="Loader">
+          <div className="LoaderC"></div>
+        </div>
+      ) : null}
       <ProjectBlock
         projectActive={projectActive}
         setProjectActive={setProjectActive}

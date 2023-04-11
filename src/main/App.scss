@@ -13,6 +13,28 @@
         width: 100%;
     }
 }
+.Loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: $BgColor;
+    z-index: 9999;
+    transition: 0.3s;
+    .LoaderC {
+        height: 100px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        border: 10px solid $MainColor;
+        border-top: 10px solid $BgColor;
+        border-bottom: 10px solid $BgColor;
+        animation: 2s Loader infinite linear;
+    }
+}
 .starterSections {
     display: flex;
     align-items: center;
@@ -85,4 +107,12 @@
 }
 .bgDecor4 {
     bottom: 10%;
+}
+@keyframes Loader {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
 }
