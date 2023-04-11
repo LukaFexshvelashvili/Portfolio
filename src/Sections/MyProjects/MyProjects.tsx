@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ProjectsArray from "../../Arrays/ProjectsArray";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import SectionStart from "../../components/SectionStart/SectionStart";
@@ -20,20 +21,23 @@ export default function MyProjects(props: {
                 ProjectId: number;
               },
               i: number
-            ) => (
-              <ProjectCard
-                key={i}
-                ProjectId={e.ProjectId}
-                image={e.image}
-                LiveLink={e.LiveLink}
-                GitLink={e.GitLink}
-                Click={props.setProjectActive}
-              />
-            )
+            ) =>
+              i < 8 ? (
+                <ProjectCard
+                  key={i}
+                  ProjectId={e.ProjectId}
+                  image={e.image}
+                  LiveLink={e.LiveLink}
+                  GitLink={e.GitLink}
+                  Click={props.setProjectActive}
+                />
+              ) : null
           )}
         </div>
         <div className="ProjectsB">
-          <button className="DefButton">მეტის ნახვა</button>
+          <Link to="/MyProjects">
+            <button className="DefButton">მეტის ნახვა</button>
+          </Link>
           <a href="https://github.com/LukaFexshvelashvili">
             <button className="DefButton2">GITHUB</button>
           </a>

@@ -61,6 +61,19 @@
   user-select: none;
   height: 20px;
   aspect-ratio: 1;
+  transition: 0.2s;
+}
+.Contact form .wrongV input,
+.Contact form .wrongV textarea {
+  background: rgba(255, 0, 0, 0.1019607843);
+  animation: 0.4s shakeW 1;
+}
+.Contact form .wrongV input::placeholder,
+.Contact form .wrongV textarea::placeholder {
+  color: rgba(255, 0, 0, 0.5176470588);
+}
+.Contact form .wrongV img {
+  mix-blend-mode: color-burn;
 }
 .Contact form button {
   height: 40px;
@@ -75,4 +88,22 @@
 .Contact .SocIcons img {
   cursor: pointer;
   height: 30px;
+}
+
+@keyframes shakeW {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(3px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  75% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }

@@ -1,12 +1,20 @@
 import "./Experience.css";
 import SectionStart from "../../components/SectionStart/SectionStart";
 import { LanguagesArray, LanguagesNArray } from "../../Arrays/LanguagesArray";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function Experience() {
+  const getExperience = useRef<any>();
+  const location = useLocation();
+  useEffect(() => {
+    if (location.state == "Experience") {
+      window.scrollTo(0, getExperience.current.offsetTop);
+    }
+  });
   const [activedLang, setActivedLang] = useState(0);
   return (
-    <div className="Experience SecPadder">
+    <div className="Experience SecPadder" ref={getExperience}>
       <div className="contentContainer">
         <SectionStart start="ჩემი" end="გამოცდილება" />
         <div className="ExperienceContent">

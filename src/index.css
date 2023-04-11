@@ -18,6 +18,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *::selection {
@@ -31,6 +32,7 @@ body {
 }
 
 a {
+  text-decoration: none;
   color: #030311;
 }
 
@@ -79,7 +81,7 @@ a {
   height: 60px;
   aspect-ratio: 1;
   display: none;
-  z-index: 9;
+  z-index: 999;
   align-items: center;
   justify-content: center;
   cursor: pointer;

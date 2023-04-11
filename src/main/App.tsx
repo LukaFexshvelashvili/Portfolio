@@ -1,16 +1,16 @@
-import Starter from "../Sections/Starter/Starter";
-import MyProjects from "../Sections/MyProjects/MyProjects";
 import Nav from "../components/Navbar/Nav";
 import "./App.css";
-import Experience from "../Sections/Experience/Experience";
 import { useEffect, useRef, useState } from "react";
 import ProjectBlock from "../components/ProjectBlock/ProjectBlock";
-import Contact from "../Sections/Contact/Contact";
 import Footer from "../components/Footer/Footer";
+import HomePage from "../Sections/HomePage";
+import { Route, Routes, useLocation } from "react-router-dom";
+import ProjectsPage from "../ProjectsPage/ProjectsPage";
 
 function App() {
   const [Loader, setLoader] = useState(true);
   const LoaderDiv = useRef<any>();
+
   useEffect(() => {
     let TimeOT: any;
     const handleLoad = () => {
@@ -61,10 +61,24 @@ function App() {
       </div>
       <div className="Content">
         <Nav />
-        <Starter />
-        <MyProjects setProjectActive={setProjectActive} />
-        <Experience />
-        <Contact clickGet={setAlertActive} />
+        <Routes>
+          <Route path="/">
+            <Route
+              index
+              element={
+                <HomePage
+                  setProjectActive={setProjectActive}
+                  clickGet={setAlertActive}
+                />
+              }
+            />
+            <Route
+              path="MyProjects"
+              element={<ProjectsPage setProjectActive={setProjectActive} />}
+            />
+          </Route>
+        </Routes>
+
         <Footer />
       </div>
     </div>
