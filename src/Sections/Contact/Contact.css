@@ -12,6 +12,8 @@
   max-height: 800px;
 }
 .Contact form {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -32,7 +34,7 @@
   padding: 0 20px;
   font-family: main_b;
   letter-spacing: 1px;
-  background: #060621;
+  background: #080829;
   font-size: 18px;
   border: 0;
   color: white;
@@ -40,7 +42,7 @@
 }
 .Contact form .inputBlock input::placeholder,
 .Contact form .inputBlock textarea::placeholder {
-  color: #131359;
+  color: #3535a3;
 }
 .Contact form .inputBlock input:focus,
 .Contact form .inputBlock textarea:focus {

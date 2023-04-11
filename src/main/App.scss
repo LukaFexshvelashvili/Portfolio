@@ -31,3 +31,58 @@
 .SecPadder {
     padding: 40px 0;
 }
+.AlertSend {
+    position: fixed;
+    height: auto;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 10px;
+    min-width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $BgColor__;
+    z-index: 3;
+    color: $White;
+    letter-spacing: 2px;
+    font-family: main_mc;
+    text-align: center;
+    padding: 50px 20px;
+    top: -100%;
+    opacity: 0;
+    transition: opacity 0.4s;
+    h2 {
+        margin-bottom: 30px;
+    }
+    span {
+        color: $MainColor;
+    }
+    p {
+        font-size: 18px;
+    }
+}
+.AlertSendActive {
+    opacity: 1;
+    top: 50%;
+}
+
+.bgD {
+    position: absolute;
+    z-index: 0;
+    user-select: none;
+    opacity: 0.8;
+    animation: blinkingbg 2s infinite;
+    max-height: 350px;
+}
+.bgDecor1 {
+    left: 0;
+}
+.bgDecor2 {
+    top: 10%;
+}
+.bgDecor3 {
+    right: 0;
+}
+.bgDecor4 {
+    bottom: 10%;
+}

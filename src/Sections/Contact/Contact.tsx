@@ -13,8 +13,9 @@ import Github from "../../images/Icons/Github.png";
 
 import "./Contact.css";
 
-export default function Contact() {
+export default function Contact(props: { clickGet: any }) {
   const SubFunction = (e: any) => {
+    props.clickGet(1);
     e.preventDefault();
   };
   return (

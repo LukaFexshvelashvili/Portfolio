@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 700px;
+    min-height: 800px;
 
     .WelcomeContent {
         position: relative;
@@ -18,21 +18,24 @@
         flex-direction: column;
         gap: 15px;
         h1 {
-            color: white;
+            .StartP {
+                display: inline-block;
+                color: white;
+                font-size: 32px;
+            }
             span {
                 position: relative;
                 color: $MainColor;
                 padding-left: 10px;
-                &::after {
-                    content: "";
-                    position: absolute;
-                    height: 100%;
-                    width: 3px;
-                    background: white;
-                    right: -5px;
-                    animation: 0.8s blinking infinite linear;
-                }
             }
+        }
+        .Blinker {
+            display: inline-block;
+            height: 42px;
+            width: 3px;
+            background: white;
+            animation: 0.8s blinking infinite linear;
+            transform: translateY(10px);
         }
         p {
             color: $White__;
@@ -129,25 +132,7 @@
         }
     }
 }
-.bgD {
-    position: absolute;
-    z-index: 0;
-    user-select: none;
-    opacity: 0.8;
-    animation: blinkingbg 2s infinite;
-}
-.bgDecor1 {
-    left: 0;
-}
-.bgDecor2 {
-    top: 10%;
-}
-.bgDecor3 {
-    right: 0;
-}
-.bgDecor4 {
-    bottom: 10%;
-}
+
 @keyframes blinking {
     0% {
         opacity: 1;

@@ -15,30 +15,6 @@
     overflow: hidden;
     transition: 0.5s;
 
-    .closeBlock {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        height: 30px;
-        aspect-ratio: 1;
-        display: flex;
-        z-index: 9;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        span {
-            display: block;
-            position: absolute;
-            height: 3px;
-            width: 100%;
-            border-radius: 5px;
-            rotate: -45deg;
-            background: $MainColor;
-            &:nth-child(2) {
-                rotate: 45deg;
-            }
-        }
-    }
     .imageSide {
         height: auto;
         overflow-y: auto;
@@ -109,8 +85,41 @@
         }
     }
 }
+
+.closeBlock {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 30px;
+    aspect-ratio: 1;
+    display: flex;
+    z-index: 9;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        border-radius: 5px;
+        rotate: -45deg;
+        background: $MainColor;
+        &:nth-child(2) {
+            rotate: 45deg;
+        }
+    }
+}
 @media (max-width: 600px) {
     .ProjectBlock {
         width: 95%;
+        box-shadow: none;
+        .closeBlock {
+            top: 10px;
+            right: 10px;
+        }
+    }
+    .ProjectBlock .infoSide h2 {
+        font-size: 20px;
     }
 }

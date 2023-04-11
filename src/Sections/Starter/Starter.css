@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 700px;
+  min-height: 800px;
 }
 .Starter .WelcomeContent {
   position: relative;
@@ -17,22 +17,23 @@
   flex-direction: column;
   gap: 15px;
 }
-.Starter .WelcomeContent h1 {
+.Starter .WelcomeContent h1 .StartP {
+  display: inline-block;
   color: white;
+  font-size: 32px;
 }
 .Starter .WelcomeContent h1 span {
   position: relative;
   color: #ff005c;
   padding-left: 10px;
 }
-.Starter .WelcomeContent h1 span::after {
-  content: "";
-  position: absolute;
-  height: 100%;
+.Starter .WelcomeContent .Blinker {
+  display: inline-block;
+  height: 42px;
   width: 3px;
   background: white;
-  right: -5px;
   animation: 0.8s blinking infinite linear;
+  transform: translateY(10px);
 }
 .Starter .WelcomeContent p {
   color: rgba(255, 255, 255, 0.3);
@@ -123,30 +124,6 @@
   display: flex;
   justify-content: center;
   overflow: hidden;
-}
-
-.bgD {
-  position: absolute;
-  z-index: 0;
-  user-select: none;
-  opacity: 0.8;
-  animation: blinkingbg 2s infinite;
-}
-
-.bgDecor1 {
-  left: 0;
-}
-
-.bgDecor2 {
-  top: 10%;
-}
-
-.bgDecor3 {
-  right: 0;
-}
-
-.bgDecor4 {
-  bottom: 10%;
 }
 
 @keyframes blinking {

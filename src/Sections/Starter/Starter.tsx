@@ -56,6 +56,7 @@ export default function Starter() {
       }
     }, 100);
     document.body.addEventListener("mousemove", (e) => eyeball(e));
+    document.body.addEventListener("touchmove", (e) => eyeballMobile(e));
 
     return () => {
       clearInterval(textChanger);
@@ -69,7 +70,7 @@ export default function Starter() {
     let y =
       eyeC1.current.getBoundingClientRect().top +
       eyeC1.current.clientHeight / 2;
-    let radian = Math.atan2(event.pageX - x, event.pageY - y);
+    let radian = Math.atan2(event.clientX - x, event.clientY - y);
     let rotate = radian * (180 / Math.PI) * -1 + 270;
     eyeC1.current.style.transform = "rotate(" + rotate + "deg)";
     let x2 =
@@ -78,7 +79,35 @@ export default function Starter() {
     let y2 =
       eyeC2.current.getBoundingClientRect().top +
       eyeC2.current.clientHeight / 2;
-    let radian2 = Math.atan2(event.pageX - x2, event.pageY - y2);
+    let radian2 = Math.atan2(event.clientX - x2, event.clientY - y2);
+    let rotate2 = radian2 * (180 / Math.PI) * -1 + 270;
+    eyeC2.current.style.transform = "rotate(" + rotate2 + "deg)";
+  }
+  function eyeballMobile(event: any) {
+    console.log(event.touches[0]);
+
+    let x =
+      eyeC1.current.getBoundingClientRect().left +
+      eyeC1.current.clientWidth / 2;
+    let y =
+      eyeC1.current.getBoundingClientRect().top +
+      eyeC1.current.clientHeight / 2;
+    let radian = Math.atan2(
+      event.touches[0].clientX - x,
+      event.touches[0].clientY - y
+    );
+    let rotate = radian * (180 / Math.PI) * -1 + 270;
+    eyeC1.current.style.transform = "rotate(" + rotate + "deg)";
+    let x2 =
+      eyeC2.current.getBoundingClientRect().left +
+      eyeC2.current.clientWidth / 2;
+    let y2 =
+      eyeC2.current.getBoundingClientRect().top +
+      eyeC2.current.clientHeight / 2;
+    let radian2 = Math.atan2(
+      event.touches[0].clientX - x2,
+      event.touches[0].clientY - y2
+    );
     let rotate2 = radian2 * (180 / Math.PI) * -1 + 270;
     eyeC2.current.style.transform = "rotate(" + rotate2 + "deg)";
   }
@@ -91,8 +120,11 @@ export default function Starter() {
       <div className="contentContainer StarterWrap">
         <div className="WelcomeContent g-6">
           <h1>
-            გამარჯობა, მე ვარ<span ref={StarterSpan}>ვებ დეველოპერი</span>
+            <p className="StartP">გამარჯობა, მე ვარ</p>
+            <span ref={StarterSpan}>ვებ დეველოპერი</span>
+            <div className="Blinker"></div>
           </h1>
+
           <p>
             3 წლიანი გამოცდილებით, გუნდური პროექტების გამოცდილებით და კლიენტთან
             თანამშრომლობით
