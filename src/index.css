@@ -57,6 +57,11 @@ a {
     width: 98%;
   }
 }
+@media (min-width: 1900px) {
+  .contentContainer {
+    width: 1800px;
+  }
+}
 .DefButton, .DefButton2 {
   height: 40px;
   width: 240px;
