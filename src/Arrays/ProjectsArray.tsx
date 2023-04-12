@@ -10,6 +10,7 @@ import project9 from "../images/Projects/project9.webp";
 import project10 from "../images/Projects/project10.webp";
 import project11 from "../images/Projects/project11.webp";
 import project12 from "../images/Projects/project12.webp";
+import project13 from "../images/Projects/project13.webp";
 
 const ProjectsArray = [
   {
@@ -20,6 +21,7 @@ const ProjectsArray = [
     image: project1,
     LiveLink: "",
     GitLink: "",
+    Team: 0,
   },
   {
     PName: "DASHBOARD",
@@ -29,6 +31,7 @@ const ProjectsArray = [
     image: project2,
     LiveLink: "",
     GitLink: "",
+    Team: 0,
   },
   {
     PName: "GESHOP",
@@ -47,6 +50,7 @@ const ProjectsArray = [
     image: project3,
     LiveLink: "",
     GitLink: "",
+    Team: 0,
   },
   {
     PName: "GAME SHOP",
@@ -56,6 +60,7 @@ const ProjectsArray = [
     image: project4,
     LiveLink: "",
     GitLink: "",
+    Team: 0,
   },
   {
     PName: "CAMP WEB",
@@ -65,6 +70,7 @@ const ProjectsArray = [
     image: project5,
     LiveLink: "https://lukafexshvelashvili.github.io/CampWebsite-React-TS/",
     GitLink: "https://github.com/LukaFexshvelashvili/CampWebsite-React-TS",
+    Team: 0,
   },
   {
     PName: "BOOK STORE",
@@ -74,6 +80,7 @@ const ProjectsArray = [
     image: project6,
     LiveLink: "https://lukafexshvelashvili.github.io/BookStoreWebsite/",
     GitLink: "https://github.com/LukaFexshvelashvili/BookStoreWebsite",
+    Team: 0,
   },
   {
     PName: "JAEGAR RESTO",
@@ -83,6 +90,7 @@ const ProjectsArray = [
     image: project7,
     LiveLink: "https://moderndesigners.github.io/Food-Restaurant/",
     GitLink: "https://github.com/ModernDesigners/Food-Restaurant",
+    Team: 1,
   },
   {
     PName: "MODERN WATCH",
@@ -92,6 +100,7 @@ const ProjectsArray = [
     image: project8,
     LiveLink: "https://moderndesigners.github.io/ModernWatch/",
     GitLink: "https://github.com/ModernDesigners/ModernWatch",
+    Team: 1,
   },
   {
     PName: "COLAB WEB",
@@ -101,6 +110,7 @@ const ProjectsArray = [
     image: project11,
     LiveLink: "https://lukafexshvelashvili.github.io/ColabWebsite/",
     GitLink: "https://github.com/LukaFexshvelashvili/ColabWebsite",
+    Team: 0,
   },
   {
     PName: "REBOUND ROLEPLAY",
@@ -119,6 +129,7 @@ const ProjectsArray = [
     image: project9,
     LiveLink: "https://reboundrp.net",
     GitLink: "",
+    Team: 0,
   },
   {
     PName: "MODERN DESIGN",
@@ -128,6 +139,7 @@ const ProjectsArray = [
     image: project10,
     LiveLink: "",
     GitLink: "",
+    Team: 0,
   },
   {
     PName: "COELUSO WEB",
@@ -137,6 +149,17 @@ const ProjectsArray = [
     image: project12,
     LiveLink: "https://lukafexshvelashvili.github.io/CoelusoWebsite/",
     GitLink: "https://github.com/LukaFexshvelashvili/CoelusoWebsite",
+    Team: 0,
+  },
+  {
+    PName: "AUTO SERVICE",
+    PLangs: ["FIGMA"],
+    PType: 0,
+    ProjectId: 13,
+    image: project13,
+    LiveLink: "",
+    GitLink: "",
+    Team: 0,
   },
 ];
 

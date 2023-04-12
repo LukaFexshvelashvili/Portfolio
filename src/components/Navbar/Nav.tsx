@@ -25,10 +25,12 @@ export default function Nav() {
         <span></span>
         <span></span>
       </div>
-      <div className="logoNav">
-        <img src={logoImage} alt="logo" />
-        <p>ლუკა ფეხშველაშვილი</p>
-      </div>
+      <Link to="/">
+        <div className="logoNav">
+          <img src={logoImage} alt="logo" />
+          <p>ლუკა ფეხშველაშვილი</p>
+        </div>
+      </Link>
       <div className="lineT"></div>
       <ul className={navActive ? "navAct" : ""}>
         <Link to="/">

@@ -4,11 +4,13 @@ import BG_2 from "../../images/BgParticles/BG2.webp";
 import BG_3 from "../../images/BgParticles/BG3.webp";
 import BG_4 from "../../images/BgParticles/BG4.webp";
 import "./Starter.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Starter() {
   let StarterSpan = useRef<any>(null);
   let eyeC1 = useRef<any>(null);
   let eyeC2 = useRef<any>(null);
+  const navigate = useNavigate();
 
   let randColS = [
     "#ff005c",
@@ -57,60 +59,59 @@ export default function Starter() {
     }, 100);
     document.body.addEventListener("mousemove", (e) => eyeball(e));
     document.body.addEventListener("touchmove", (e) => eyeballMobile(e));
-
+    let eyeball = (event: any) => {
+      let x =
+        eyeC1.current.getBoundingClientRect().left +
+        eyeC1.current.clientWidth / 2;
+      let y =
+        eyeC1.current.getBoundingClientRect().top +
+        eyeC1.current.clientHeight / 2;
+      let radian = Math.atan2(event.clientX - x, event.clientY - y);
+      let rotate = radian * (180 / Math.PI) * -1 + 270;
+      eyeC1.current.style.transform = "rotate(" + rotate + "deg)";
+      let x2 =
+        eyeC2.current.getBoundingClientRect().left +
+        eyeC2.current.clientWidth / 2;
+      let y2 =
+        eyeC2.current.getBoundingClientRect().top +
+        eyeC2.current.clientHeight / 2;
+      let radian2 = Math.atan2(event.clientX - x2, event.clientY - y2);
+      let rotate2 = radian2 * (180 / Math.PI) * -1 + 270;
+      eyeC2.current.style.transform = "rotate(" + rotate2 + "deg)";
+    };
+    let eyeballMobile = (event: any) => {
+      let x =
+        eyeC1.current.getBoundingClientRect().left +
+        eyeC1.current.clientWidth / 2;
+      let y =
+        eyeC1.current.getBoundingClientRect().top +
+        eyeC1.current.clientHeight / 2;
+      let radian = Math.atan2(
+        event.touches[0].clientX - x,
+        event.touches[0].clientY - y
+      );
+      let rotate = radian * (180 / Math.PI) * -1 + 270;
+      eyeC1.current.style.transform = "rotate(" + rotate + "deg)";
+      let x2 =
+        eyeC2.current.getBoundingClientRect().left +
+        eyeC2.current.clientWidth / 2;
+      let y2 =
+        eyeC2.current.getBoundingClientRect().top +
+        eyeC2.current.clientHeight / 2;
+      let radian2 = Math.atan2(
+        event.touches[0].clientX - x2,
+        event.touches[0].clientY - y2
+      );
+      let rotate2 = radian2 * (180 / Math.PI) * -1 + 270;
+      eyeC2.current.style.transform = "rotate(" + rotate2 + "deg)";
+    };
     return () => {
       clearInterval(textChanger);
+      eyeball = () => {};
+      eyeballMobile = () => {};
     };
   }, [StarterSpan.current]);
 
-  function eyeball(event: any) {
-    let x =
-      eyeC1.current.getBoundingClientRect().left +
-      eyeC1.current.clientWidth / 2;
-    let y =
-      eyeC1.current.getBoundingClientRect().top +
-      eyeC1.current.clientHeight / 2;
-    let radian = Math.atan2(event.clientX - x, event.clientY - y);
-    let rotate = radian * (180 / Math.PI) * -1 + 270;
-    eyeC1.current.style.transform = "rotate(" + rotate + "deg)";
-    let x2 =
-      eyeC2.current.getBoundingClientRect().left +
-      eyeC2.current.clientWidth / 2;
-    let y2 =
-      eyeC2.current.getBoundingClientRect().top +
-      eyeC2.current.clientHeight / 2;
-    let radian2 = Math.atan2(event.clientX - x2, event.clientY - y2);
-    let rotate2 = radian2 * (180 / Math.PI) * -1 + 270;
-    eyeC2.current.style.transform = "rotate(" + rotate2 + "deg)";
-  }
-  function eyeballMobile(event: any) {
-    console.log(event.touches[0]);
-
-    let x =
-      eyeC1.current.getBoundingClientRect().left +
-      eyeC1.current.clientWidth / 2;
-    let y =
-      eyeC1.current.getBoundingClientRect().top +
-      eyeC1.current.clientHeight / 2;
-    let radian = Math.atan2(
-      event.touches[0].clientX - x,
-      event.touches[0].clientY - y
-    );
-    let rotate = radian * (180 / Math.PI) * -1 + 270;
-    eyeC1.current.style.transform = "rotate(" + rotate + "deg)";
-    let x2 =
-      eyeC2.current.getBoundingClientRect().left +
-      eyeC2.current.clientWidth / 2;
-    let y2 =
-      eyeC2.current.getBoundingClientRect().top +
-      eyeC2.current.clientHeight / 2;
-    let radian2 = Math.atan2(
-      event.touches[0].clientX - x2,
-      event.touches[0].clientY - y2
-    );
-    let rotate2 = radian2 * (180 / Math.PI) * -1 + 270;
-    eyeC2.current.style.transform = "rotate(" + rotate2 + "deg)";
-  }
   return (
     <div className="Starter">
       <img src={BG_1} alt="BgDecoration" className="bgD bgDecor1" />
@@ -130,7 +131,12 @@ export default function Starter() {
             თანამშრომლობით
           </p>
           <div className="ButtonsRow">
-            <button className="DefButton">დამიკავშირდი</button>
+            <button
+              onClick={() => navigate("/", { state: "Contact" })}
+              className="DefButton"
+            >
+              დამიკავშირდი
+            </button>
             <a href="https://github.com/LukaFexshvelashvili">
               <button className="DefButton2">GITHUB</button>
             </a>

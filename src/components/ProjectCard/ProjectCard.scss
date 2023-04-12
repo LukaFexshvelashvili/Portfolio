@@ -71,6 +71,7 @@
         border-radius: 5px;
         border: 2px solid $MainColor;
         bottom: 10px;
+        backface-visibility: hidden;
     }
 }
 
@@ -101,5 +102,26 @@
     }
     to {
         transform: translateX(600px) rotate(20deg);
+    }
+}
+@media (max-width: 390px) {
+    .ProjectCard {
+        width: 90%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        .DetailsG {
+            font-size: 15px;
+            width: 200px;
+            height: 35px;
+        }
+        .HoverButtons {
+            a {
+                button {
+                    height: 30px;
+                    width: 120px;
+                    font-size: 14px;
+                }
+            }
+        }
     }
 }

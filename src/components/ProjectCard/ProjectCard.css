@@ -71,6 +71,7 @@
   border-radius: 5px;
   border: 2px solid #ff005c;
   bottom: 10px;
+  backface-visibility: hidden;
 }
 
 .HoverButtons {
@@ -98,5 +99,22 @@
   }
   to {
     transform: translateX(600px) rotate(20deg);
+  }
+}
+@media (max-width: 390px) {
+  .ProjectCard {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+  .ProjectCard .DetailsG {
+    font-size: 15px;
+    width: 200px;
+    height: 35px;
+  }
+  .ProjectCard .HoverButtons a button {
+    height: 30px;
+    width: 120px;
+    font-size: 14px;
   }
 }

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import ProjectBlock from "../components/ProjectBlock/ProjectBlock";
 import Footer from "../components/Footer/Footer";
 import HomePage from "../Sections/HomePage";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import ProjectsPage from "../ProjectsPage/ProjectsPage";
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
       TimeOT = setTimeout(() => {
         setLoader(false);
       }, 300);
+      window.scrollTo(0, 0);
     };
 
     window.onload = handleLoad;

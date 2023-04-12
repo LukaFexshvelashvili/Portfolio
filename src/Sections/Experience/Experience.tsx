@@ -2,14 +2,16 @@ import "./Experience.css";
 import SectionStart from "../../components/SectionStart/SectionStart";
 import { LanguagesArray, LanguagesNArray } from "../../Arrays/LanguagesArray";
 import { useEffect, useRef, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Experience() {
   const getExperience = useRef<any>();
   const location = useLocation();
+  const navigate = useNavigate();
   useEffect(() => {
     if (location.state == "Experience") {
       window.scrollTo(0, getExperience.current.offsetTop);
+      navigate(location.pathname, { state: {} });
     }
   });
   const [activedLang, setActivedLang] = useState(0);

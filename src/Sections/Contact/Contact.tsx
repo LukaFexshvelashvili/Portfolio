@@ -12,15 +12,18 @@ import Github from "../../images/Icons/Github.png";
 import axios from "axios";
 import "./Contact.css";
 import { useEffect, useRef } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Contact(props: { clickGet: any }) {
   const getContact = useRef<any>();
 
   const location = useLocation();
+  const navigate = useNavigate();
+
   useEffect(() => {
     if (location.state == "Contact") {
       window.scrollTo(0, getContact.current.offsetTop);
+      navigate(location.pathname, { state: {} });
     }
   });
 

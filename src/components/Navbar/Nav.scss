@@ -62,6 +62,7 @@ nav {
             color: $MainColor;
             background: $BgColor__;
             transition: 0.3s;
+            backface-visibility: hidden;
             &:hover {
                 background: $BgColorH;
             }

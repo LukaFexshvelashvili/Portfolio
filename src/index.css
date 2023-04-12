@@ -194,6 +194,7 @@ button {
     gap: 50px;
     transform: translateX(-100%);
     transition: 0.3s;
+    justify-content: center;
   }
   nav ul li {
     color: white;

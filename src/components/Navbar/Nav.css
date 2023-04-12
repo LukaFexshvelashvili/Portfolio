@@ -60,6 +60,7 @@ nav ul .liContact {
   color: #ff005c;
   background: #0d0d40;
   transition: 0.3s;
+  backface-visibility: hidden;
 }
 nav ul .liContact:hover {
   background: #0a0a33;
