@@ -11,6 +11,9 @@ import project10 from "../images/Projects/project10.webp";
 import project11 from "../images/Projects/project11.webp";
 import project12 from "../images/Projects/project12.webp";
 import project13 from "../images/Projects/project13.webp";
+import project14 from "../images/Projects/project14.webp";
+import project15 from "../images/Projects/project15.webp";
+import project16 from "../images/Projects/project16.webp";
 
 const ProjectsArray = [
   {
@@ -36,6 +39,7 @@ const ProjectsArray = [
   {
     PName: "GESHOP",
     PLangs: [
+      "FIGMA",
       "HTML",
       "CSS",
       "SCSS",
@@ -94,7 +98,7 @@ const ProjectsArray = [
   },
   {
     PName: "MODERN WATCH",
-    PLangs: ["SCSS", "REACT", "TYPESCRIPT", "VITE"],
+    PLangs: ["FIGMA", "SCSS", "REACT", "TYPESCRIPT", "VITE"],
     PType: 2,
     ProjectId: 8,
     image: project8,
@@ -115,6 +119,7 @@ const ProjectsArray = [
   {
     PName: "REBOUND ROLEPLAY",
     PLangs: [
+      "FIGMA",
       "HTML",
       "CSS",
       "SCSS",
@@ -133,7 +138,15 @@ const ProjectsArray = [
   },
   {
     PName: "MODERN DESIGN",
-    PLangs: ["HTML", "CSS", "SCSS", "BOOTSTRAP", "JAVASCRIPT", "JQUERY"],
+    PLangs: [
+      "FIGMA",
+      "HTML",
+      "CSS",
+      "SCSS",
+      "BOOTSTRAP",
+      "JAVASCRIPT",
+      "JQUERY",
+    ],
     PType: 2,
     ProjectId: 10,
     image: project10,
@@ -159,6 +172,36 @@ const ProjectsArray = [
     image: project13,
     LiveLink: "",
     GitLink: "",
+    Team: 0,
+  },
+  {
+    PName: "BRAVAY",
+    PLangs: ["SCSS", "REACT", "TYPESCRIPT", "VITE"],
+    PType: 1,
+    ProjectId: 14,
+    image: project14,
+    LiveLink: "https://lukafexshvelashvili.github.io/NFT-Landing-Page/",
+    GitLink: "https://github.com/LukaFexshvelashvili/NFT-Landing-Page",
+    Team: 0,
+  },
+  {
+    PName: "EVENTOY",
+    PLangs: ["SCSS", "REACT", "TYPESCRIPT", "VITE"],
+    PType: 1,
+    ProjectId: 15,
+    image: project15,
+    LiveLink: "https://lukafexshvelashvili.github.io/Eventoy/",
+    GitLink: "https://github.com/LukaFexshvelashvili/Eventoy",
+    Team: 0,
+  },
+  {
+    PName: "RATIONS",
+    PLangs: ["SCSS", "REACT", "TYPESCRIPT", "VITE"],
+    PType: 1,
+    ProjectId: 16,
+    image: project16,
+    LiveLink: "https://lukafexshvelashvili.github.io/Rations/",
+    GitLink: "https://github.com/LukaFexshvelashvili/Rations",
     Team: 0,
   },
 ];

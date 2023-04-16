@@ -33,7 +33,7 @@ export default function ProjectsPage(props: { setProjectActive: any }) {
               ) : null
           )}
         </div>
-        <SectionStart end="დიზაინები" giveStyle="StartPadd" />
+        <SectionStart start="ჩემი" end="დიზაინები" giveStyle="StartPadd" />
         <div className="ProjectsRow">
           {ProjectsArray.map(
             (
