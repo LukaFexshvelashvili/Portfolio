@@ -1,6 +1,6 @@
 import Nav from "../components/Navbar/Nav";
 import "./App.css";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import ProjectBlock from "../components/ProjectBlock/ProjectBlock";
 import Footer from "../components/Footer/Footer";
 import HomePage from "../Sections/HomePage";
@@ -9,40 +9,19 @@ import ProjectsPage from "../ProjectsPage/ProjectsPage";
 
 function App() {
   const [Loader, setLoader] = useState(true);
-  const LoaderDiv = useRef<any>();
-
   useEffect(() => {
-    let TimeOT: any;
-    const handleLoad = () => {
-      if (LoaderDiv.current) {
-        LoaderDiv.current.style.opacity = "0";
-      }
-      TimeOT = setTimeout(() => {
-        setLoader(false);
-      }, 300);
-      window.scrollTo(0, 0);
-    };
-
-    window.onload = handleLoad;
-
-    return () => {
-      window.onload = null;
-      clearTimeout(TimeOT);
-    };
+    setLoader(false);
   }, []);
-  const isMob = window.innerWidth > 800;
+
   const [projectActive, setProjectActive] = useState(0);
   const [alertActive, setAlertActive] = useState(0);
 
   return (
     <div className="App">
-      {isMob ? (
-        Loader ? (
-          <div ref={LoaderDiv} className="Loader">
-            <div className="LoaderC"></div>
-          </div>
-        ) : null
-      ) : null}
+      <div className={`Loader${Loader ? "" : " LoaderHide"}`}>
+        <div className="LoaderC"></div>
+      </div>
+
       <ProjectBlock
         projectActive={projectActive}
         setProjectActive={setProjectActive}
