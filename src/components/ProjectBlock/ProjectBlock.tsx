@@ -61,7 +61,7 @@ export default function ProjectBlock({
         <div className="usedLanguages">
           გამოყენებული ტექნოლოგიები:{" "}
           {getProject?.PLangs.map((e, i) => (
-            <span className={`${e}Dot`}>
+            <span className={`${e}Dot`} key={i}>
               {e}
               <span className="nonerr">
                 {getProject?.PLangs.length !== i + 1 ? "," : ""}

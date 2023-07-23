@@ -1,15 +1,29 @@
+import { memo, useMemo } from "react";
 import ProjectsArray from "../Arrays/ProjectsArray";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 import SectionStart from "../components/SectionStart/SectionStart";
 import "./ProjectsPage.css";
 
-export default function ProjectsPage(props: { setProjectActive: any }) {
+function ProjectsPage(props: { setProjectActive: any }) {
+  const webSitesProjects = useMemo(() => {
+    return ProjectsArray.filter(
+      (e) => (e.Team === 0 && e.PType === 1) || e.PType === 2
+    );
+  }, []);
+
+  const designsProjects = useMemo(() => {
+    return ProjectsArray.filter((e) => e.PType === 0);
+  }, []);
+
+  const teamProjects = useMemo(() => {
+    return ProjectsArray.filter((e) => e.Team === 1);
+  }, []);
   return (
     <div className="ProjectsPage">
       <div className="contentContainer">
         <SectionStart start="ჩემი" end="ვებსაიტები" giveStyle="StartPadd" />
         <div className="ProjectsRow">
-          {ProjectsArray.map(
+          {webSitesProjects.map(
             (
               e: {
                 image: string;
@@ -35,7 +49,7 @@ export default function ProjectsPage(props: { setProjectActive: any }) {
         </div>
         <SectionStart start="ჩემი" end="დიზაინები" giveStyle="StartPadd" />
         <div className="ProjectsRow">
-          {ProjectsArray.map(
+          {designsProjects.map(
             (
               e: {
                 image: string;
@@ -62,7 +76,7 @@ export default function ProjectsPage(props: { setProjectActive: any }) {
         <SectionStart start="პროექტები" end="გუნდში" giveStyle="StartPadd" />
 
         <div className="ProjectsRow">
-          {ProjectsArray.map(
+          {teamProjects.map(
             (
               e: {
                 image: string;
@@ -89,3 +103,4 @@ export default function ProjectsPage(props: { setProjectActive: any }) {
     </div>
   );
 }
+export default memo(ProjectsPage);
