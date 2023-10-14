@@ -57,7 +57,10 @@
 .ExperienceContent .TextSide .ActivedN::before {
   width: 100%;
 }
-
+.langName {
+  display: inline-block;
+  padding-right: 7px;
+}
 .redDot {
   color: #ff005c;
   animation: 1s lighter infinite ease-in-out;
@@ -149,6 +152,18 @@
 }
 .FIGMADot::before {
   background: #0acf83;
+}
+.TAILWINDDot {
+  color: #06b6d4;
+}
+.TAILWINDDot::before {
+  background: #06b6d4;
+}
+.NODEJSDot {
+  color: #539e43;
+}
+.NODEJSDot::before {
+  background: #539e43;
 }
 
 .noner {

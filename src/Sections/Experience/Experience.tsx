@@ -28,14 +28,13 @@ export default function Experience() {
               ტექნოლოგიების დახმარებით
             </h3>
             <h3>
-              ტექნოლოგიები რომლებთანაც მიმუშავია:
+              ტექნოლოგიები რომლებთანაც მიმუშავია:{" "}
               {LanguagesNArray.map(
                 (
                   e: { styler: string; name: string; getId: number },
                   i: number
                 ) => (
-                  <span key={i}>
-                    {" "}
+                  <span key={i} className="langName">
                     <span
                       onMouseOver={() => setActivedLang(e.getId)}
                       onMouseLeave={() => setActivedLang(0)}

@@ -6,6 +6,7 @@ import Footer from "../components/Footer/Footer";
 import HomePage from "../Sections/HomePage";
 import { Route, Routes } from "react-router-dom";
 import ProjectsPage from "../ProjectsPage/ProjectsPage";
+import LoaderPage from "./LoaderPage";
 
 function App() {
   const [Loader, setLoader] = useState(true);
@@ -18,9 +19,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className={`Loader${Loader ? "" : " LoaderHide"}`}>
-        <div className="LoaderC"></div>
-      </div>
+      <LoaderPage Loader={Loader} />
 
       <ProjectBlock
         projectActive={projectActive}

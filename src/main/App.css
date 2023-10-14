@@ -60,6 +60,10 @@
   color: #ff005c;
 }
 
+.EndAnimLoader {
+  display: none;
+}
+
 .SecPadder {
   padding: 40px 0;
 }

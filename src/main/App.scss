@@ -26,7 +26,9 @@
     width: 100%;
     background: $BgColor;
     z-index: 9999;
-    transition: opacity 0.3s, visibility 0.3s;
+    transition:
+        opacity 0.3s,
+        visibility 0.3s;
     .LoaderC {
         height: 100px;
         aspect-ratio: 1;
@@ -55,6 +57,9 @@
             color: $MainColor;
         }
     }
+}
+.EndAnimLoader {
+    display: none;
 }
 .SecPadder {
     padding: 40px 0;
