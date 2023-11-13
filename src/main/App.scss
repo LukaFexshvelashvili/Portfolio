@@ -39,6 +39,30 @@
         animation: 2s Loader infinite linear;
     }
 }
+.LoaderScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+    top: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: $BgColor;
+    z-index: 9999;
+    transition: none;
+    .LoaderC {
+        height: 100px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        border: 10px solid $MainColor;
+        border-top: 10px solid $BgColor;
+        border-bottom: 10px solid $BgColor;
+        animation: 2s Loader infinite linear;
+    }
+}
 .LoaderHide {
     opacity: 0;
     visibility: hidden;

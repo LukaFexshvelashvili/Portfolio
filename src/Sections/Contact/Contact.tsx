@@ -9,12 +9,14 @@ import Message from "../../images/Icons/message.png";
 import Facebook from "../../images/Icons/Facebook.png";
 import Instagram from "../../images/Icons/Instagram.png";
 import Github from "../../images/Icons/Github.png";
-import axios from "axios";
+import emailjs from "@emailjs/browser";
 import "./Contact.css";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import LoaderScreen from "../../main/LoaderScreen";
 
 export default function Contact(props: { clickGet: any }) {
+  const [mailLoader, setMailLoader] = useState(false);
   const getContact = useRef<any>();
 
   const location = useLocation();
@@ -33,6 +35,7 @@ export default function Contact(props: { clickGet: any }) {
   const NameValueBlock = useRef<any>();
   const MailValueBlock = useRef<any>();
   const MessageValueBlock = useRef<any>();
+  const Form = useRef(null);
 
   const SubFunction = (e: any) => {
     e.preventDefault();
@@ -42,20 +45,40 @@ export default function Contact(props: { clickGet: any }) {
         MailValueBlock.current.classList.remove("wrongV");
         if (MessageValue.current.value.length > 1) {
           MessageValueBlock.current.classList.remove("wrongV");
-          axios
-            .post("http://localhost:3000/getMessage.php", {
-              Name: NameValue.current.value,
-              Mail: MailValue.current.value,
-              Message: MessageValue.current.value,
-            })
-            .then((res) => {
-              NameValue.current.value = "";
-              MailValue.current.value = "";
-              MessageValue.current.value = "";
-              if (res.status === 200) {
+          setMailLoader(true);
+          // axios
+          //   .post("http://localhost:3000/getMessage.php", {
+          //     Name: NameValue.current.value,
+          //     Mail: MailValue.current.value,
+          //     Message: MessageValue.current.value,
+          //   })
+          //   .then((res) => {
+          //     NameValue.current.value = "";
+          //     MailValue.current.value = "";
+          //     MessageValue.current.value = "";
+          //   });
+          emailjs
+            .sendForm(
+              "service_k2z8v1d",
+              "template_0qtwble",
+              Form.current ? Form.current : "",
+              "LZfhpckPrLEKNupbf"
+            )
+            .then(
+              function (response) {
+                setMailLoader(false);
+
+                NameValue.current.value = "";
+                MailValue.current.value = "";
+                MessageValue.current.value = "";
                 props.clickGet(1);
+              },
+              function (error) {
+                setMailLoader(false);
+
+                alert("Something wrong try again later");
               }
-            });
+            );
         } else {
           MessageValueBlock.current.classList.add("wrongV");
         }
@@ -71,13 +94,13 @@ export default function Contact(props: { clickGet: any }) {
       <div className="contentContainer">
         <SectionStart end="კონტაქტი" center={true} />
       </div>
-
+      <LoaderScreen Loader={mailLoader} />
       <div className="contentContainer ContContent">
         <img src={BG_1} alt="BgDecoration" className="bgD bgDecor1" />
         <img src={BG_2} alt="BgDecoration" className="bgD bgDecor2" />
         <img src={BG_3} alt="BgDecoration" className="bgD bgDecor3" />
         <img src={BG_4} alt="BgDecoration" className="bgD bgDecor4" />
-        <form onSubmit={(e) => SubFunction(e)}>
+        <form onSubmit={(e) => SubFunction(e)} ref={Form}>
           <div className="inputBlock" ref={NameValueBlock}>
             <input ref={NameValue} type="text" placeholder="თქვენი სახელი" />
             <img src={User} alt="UserIcon" />

@@ -166,6 +166,13 @@
   background: #539e43;
 }
 
+.GITHUBDot {
+  color: #303030;
+}
+.GITHUBDot::before {
+  background: #303030;
+}
+
 .noner {
   color: rgba(255, 255, 255, 0.6);
 }

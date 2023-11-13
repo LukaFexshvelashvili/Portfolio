@@ -12,6 +12,7 @@ import MYSQL from "../images/Languages/MYSQL.webp";
 import FIGMA from "../images/Languages/FIGMA.webp";
 import TAILWIND from "../images/Languages/TAILWIND.webp";
 import NODEJS from "../images/Languages/NODEJS.webp";
+import GITHUB from "../images/Languages/GITHUB.webp";
 
 export const LanguagesArray = [
   { getId: 1, image: HTML, name: "HTML" },
@@ -28,6 +29,7 @@ export const LanguagesArray = [
   { getId: 12, image: PHP, name: "PHP" },
   { getId: 13, image: MYSQL, name: "MYSQL" },
   { getId: 14, image: FIGMA, name: "FIGMA" },
+  { getId: 15, image: GITHUB, name: "GITHUB" },
 ];
 export const LanguagesNArray = [
   { getId: 1, styler: "HTMLDot", name: "HTML" },
@@ -44,4 +46,5 @@ export const LanguagesNArray = [
   { getId: 12, styler: "PHPDot", name: "PHP" },
   { getId: 13, styler: "MYSQLDot", name: "MYSQL" },
   { getId: 14, styler: "FIGMADot", name: "FIGMA" },
+  { getId: 15, styler: "GITHUBDot", name: "GITHUB" },
 ];
