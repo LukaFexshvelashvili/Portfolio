@@ -102,15 +102,29 @@ export default function Contact(props: { clickGet: any }) {
         <img src={BG_4} alt="BgDecoration" className="bgD bgDecor4" />
         <form onSubmit={(e) => SubFunction(e)} ref={Form}>
           <div className="inputBlock" ref={NameValueBlock}>
-            <input ref={NameValue} type="text" placeholder="თქვენი სახელი" />
+            <input
+              ref={NameValue}
+              name="name"
+              type="text"
+              placeholder="თქვენი სახელი"
+            />
             <img src={User} alt="UserIcon" />
           </div>
           <div className="inputBlock" ref={MailValueBlock}>
-            <input ref={MailValue} type="text" placeholder="თქვენი მეილი" />
+            <input
+              ref={MailValue}
+              name="email"
+              type="text"
+              placeholder="თქვენი მეილი"
+            />
             <img src={Mail} alt="MailIcon" />
           </div>
           <div className="inputBlock" ref={MessageValueBlock}>
-            <textarea ref={MessageValue} placeholder="მესიჯი"></textarea>
+            <textarea
+              ref={MessageValue}
+              name="message"
+              placeholder="მესიჯი"
+            ></textarea>
             <img src={Message} alt="MessageIcon" />
           </div>
           <button className="DefButton subForm">გაგზავნა</button>

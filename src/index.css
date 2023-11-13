@@ -73,6 +73,7 @@ a {
   background: #ff005c;
   color: #030311;
   transition: 0.2s;
+  outline: none;
 }
 .DefButton:hover, .DefButton2:hover {
   background: rgb(235, 0, 86);

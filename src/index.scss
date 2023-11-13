@@ -69,6 +69,7 @@ a {
     background: $MainColor;
     color: $BgColor;
     transition: 0.2s;
+    outline: none;
     &:hover {
         background: rgb(235, 0, 86);
     }
